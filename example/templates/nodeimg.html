@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 노드 이미지 추가하기</title>
+</head>
+<body>
+    <div>
+        <h1>커피 상세 보기</h1>
+        <a href="#" onclick="addImg(); this.onclick='' ">더 보기</a>
+        <div id="info">
+        </div>
+    </div>
+<!--    addimg.js 연결하기-->
+    <script src=" {{ url_for('static', filename='js/addimg.js' )}} "></script>
+</body>
+</html>

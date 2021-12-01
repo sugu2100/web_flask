@@ -1,0 +1,78 @@
+/* 메인 페이지 스타일 */
+*{margin: 0; padding: 0}
+#container{width: 1000px; margin: 10px auto;}
+header{height: 100px;}
+nav ul{list-style: none; text-align: right; margin-right: 150px;}
+nav ul li{display: inline-block; margin: 10px; border-top: 3px solid #333; padding: 10px}
+nav ul li a{text-decoration: none; color: #000;}
+nav ul li:hover{background-color: #eee}
+section{text-align: center}
+section h1{font-size: 2em; margin-bottom: 20px}
+section img{margin-bottom: 10px;}
+
+/*register 스타일 */
+section .join{width: 550px; margin: 20px auto;}
+section .join fieldset{border: 1px solid #555; border-radius: 5px}
+section .join ul{list-style: none; padding: 10px}
+section .join ul li{margin: 15px;}
+section .join ul li label{width: 120px; float: left; text-align: right}
+section .join ul li input[type='text'], input[type='password'], input[type='date']{width: 250px; height: 30px;
+   border: 1px solid #555; border-radius: 5px}
+section .join ul li input[type='button']{width: 80px; height: 30px; margin:10px 5px; border: 1px solid #555; border-radius: 5px}
+section .join ul li input[type='reset']{width: 80px; height: 30px; margin:10px 5px; border: 1px solid #555; border-radius: 5px}
+
+/* login 스타일 */
+.login{width: 450px; margin: 20px auto;}
+.login fieldset{border: 1px solid #555; border-radius: 5px}
+.login p{padding-top: 20px; color: #f00}
+.login ul{list-style: none; padding-top: 10px;}
+.login ul li{margin: 30px 20px 10px 20px;}
+.login ul li label{width: 100px; float: left; text-align: right}
+.login ul li input[type='text'], li input[type='password']{width: 250px; height: 30px;
+    border: 1px solid #555; border-radius: 5px}
+.login ul li input[type='submit']{width: 80px; height: 30px; margin-bottom: 10px;
+    border: 1px solid #555; border-radius: 5px}
+
+/* memberlist 스타일 */
+section h2{margin-bottom: 20px;}
+section .tbl_list {width: 650px;}
+section .tbl_list, th, td{border: 1px solid #ccc; border-collapse: collapse; margin: 0 auto;}
+section .tbl_list th, td{padding: 15px;}
+section .tbl_list th{background-color: #eee}
+
+/* member_view 스타일 */
+section .tbl_view{width: 450px;}
+section .tbl_view, th, td{border: 1px solid #ccc; border-collapse: collapse; margin: 0 auto;}
+section .tbl_view th, td{padding: 20px; height: 40px;}
+section .tbl_view input[type='text'], input[type='password']{width: 200px; height: 30px; text-align: left; }
+section .tbl_view .button{width: 70px; height: 30px; border: 1px solid #333; background-color: #eee;
+    padding: 7px; margin: 3px; border-radius: 3px;}
+section .tbl_view input[type='submit']{width: 70px; height: 35px; border-radius: 3px;}
+section .tbl_view input[type='reset']{width: 70px; height: 35px; border-radius: 3px;}
+section .tbl_view a{text-decoration: none; color: #000;}
+
+/* boardlist 스타일 */
+section .tbl_bo_list{width: 600px;}
+section .tbl_bo_list, th, td{border: 1px solid #ccc; border-collapse: collapse; margin: 0 auto;}
+section .tbl_bo_list th, td{padding: 10px;}
+section .tbl_bo_list th{background-color: #eee}
+
+/* board_write 스타일*/
+section .tbl_bo_write{width: 600px;}
+section .tbl_bo_write, th, td{border: 1px solid #ccc; border-collapse: collapse; margin: 0 auto;}
+section .tbl_bo_write th, td{padding: 10px;}
+section .tbl_bo_write textarea{width: 550px; height: 300px;}
+section .tbl_bo_write input[type='text']{width: 550px; height: 25px;}
+section .tbl_bo_write input[type='submit'], input[type='reset']{width: 80px; height: 30px;}
+
+/* board_view 스타일*/
+section .tbl_bo_view{width: 600px;}
+section .tbl_bo_view, th, td{border: 1px solid #ccc; border-collapse: collapse; margin: 0 auto;}
+section .tbl_bo_view th, td{padding: 10px;}
+section .tbl_bo_view textarea{width: 550px; height: 300px;}
+section .tbl_bo_view input[type='text']{width: 550px; height: 25px;}
+section .tbl_bo_view .button{width: 70px; height: 30px; border: 1px solid #333; background-color: #eee;
+    padding: 7px; margin: 3px; border-radius: 3px;}
+section .tbl_bo_view input[type='submit']{width: 70px; height: 35px; border-radius: 3px;}
+section .tbl_bo_view input[type='reset']{width: 70px; height: 35px; border-radius: 3px;}
+section .tbl_bo_view a{text-decoration: none; color: #000;}

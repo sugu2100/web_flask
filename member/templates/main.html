@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메인 페이지</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="data:image/x-icon; " type="image/x-icon">
+</head>
+<body>
+    <div id="container">
+      {% include 'navbar.html' %}
+        <section>
+           <h2>안녕하세요~ 회원 커뮤니티 사이트입니다.</h2>
+            <img src="{{ url_for('static', filename='images/coffee-blue.jpg') }}" id="pic" alt="커피잔">
+            <p id="demo"></p>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/main_js.js') }}"></script>
+</body>
+</html>

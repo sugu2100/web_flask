@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 목록</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="container">
+      {% include 'navbar.html' %}
+        <section>
+          <h2>게시판 목록</h2>
+          <table class="tbl_bo_list">
+              <tr>
+                  <th>번호</th><th>제목</th><th>글쓴이</th>
+              </tr>
+              {% for i in rs %}
+              <tr>
+                  <td>{{ loop.index }}</td>
+                  <td><a href="{{ url_for('board_view', title = i[0]) }}">{{ i[0] }}</a></td>
+                  <td>{{ i[2] }}</td>
+              </tr>
+              {% endfor %}
+              <tr>
+                  <td colspan="4">
+                      <a href="{{ url_for('board_write') }}">글쓰기</a>
+                  </td>
+              </tr>
+          </table>
+        </section>
+    </div>
+</body>
+</html>

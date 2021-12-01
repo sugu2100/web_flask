@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 쓰기</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  {% if not session['userID'] %}
+      <script>
+          alert("로그인을 해주세요");
+          location.href="{{ url_for('login') }}";
+      </script>
+  {% endif %}
+  <div id="container">
+      {% include 'navbar.html' %}
+      <section>
+      <h2>게시글 쓰기</h2>
+        <form action="{{ url_for('board_write') }}" method="post">
+            <table class="tbl_bo_write">
+              <tr>
+                  <td><input type="text" name="title" placeholder="글 제목"></td>
+              </tr>
+              <tr>
+                  <td><textarea name="content" placeholder="글 내용"></textarea></td>
+              </tr>
+              <tr>
+                  <td colspan="2">
+                      <input type="submit" value="글쓰기">
+                      <input type="reset" value="취소">
+                  </td>
+              </tr>
+            </table>
+        </form>
+      </section>
+  </div>
+</body>
+</html>

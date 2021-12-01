@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 수정</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="container">
+      {% include 'navbar.html' %}
+      <section>
+      <h2>게시글 수정</h2>
+          <form action="{{ url_for('board_edit', title=rs[0]) }}" method="post">
+              <table class="tbl_bo_view">
+                  {% if rs %}
+                  <tr>
+                      <td><input type="text" name="title" value="{{ rs[0] }}"></td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <textarea name="content">{{ rs[1] }}</textarea>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><input type="text" name="memberid" value="작성자 : {{rs[2] }}"></td>
+                  </tr>
+                  <tr>
+                      <td colspan="2">
+                          <input type="submit" value="수정">
+                          <input type="reset" value="취소">
+                      </td>
+                  </tr>
+                  {% endif %}
+              </table>
+          </form>
+      </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 목록</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% if not session['userID'] %}
+      <script>
+          alert("로그인을 해주세요");
+          location.href="{{ url_for('login') }}";
+      </script>
+    {% endif %}
+    <div id="container">
+      {% include 'navbar.html' %}
+      <section>
+      <h2>게시글 보기</h2>
+          <table class="tbl_bo_view">
+              {% if rs %}
+              <tr>
+                  <td><input type="text" name="title" value="{{ rs[0] }}"></td>
+              </tr>
+              <tr>
+                  <td>
+                      <textarea name="content">{{ rs[1] }}</textarea>
+                  </td>
+              </tr>
+              <tr>
+                  <td><input type="text" name="memberid" value="작성자 : {{ rs[2] }}"></td>
+              </tr>
+              <tr>
+                  <td colspan="2">
+                      <a href="{{ url_for('boardlist') }}" class="button">목록</a>
+                      {% if session['userID'] == rs[2] %}
+                      <a href="{{ url_for('board_edit', title=rs[0]) }}" class="button">수정</a>
+                      <a onclick="confirm('정말로 삭제하시겠습니까?')"
+                         href="{{ url_for('board_delete', title=rs[0]) }}" class="button">삭제</a>
+                      {% endif %}
+                  </td>
+              </tr>
+              {% endif %}
+          </table>
+      </section>
+    </div>
+</body>
+</html>
