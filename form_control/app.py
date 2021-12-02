@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 # 메인 페이지
 @app.route("/")
-def main():
-    return render_template('main.html')
+def index():
+    return render_template('index.html')
     #return 'Hello~ Flask'
 
 # 회원 가입

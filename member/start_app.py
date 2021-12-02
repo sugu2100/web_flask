@@ -11,9 +11,9 @@ def getconn():
 @app.route("/")
 def main():
     if "userID" in session:  #login()에서 세션 발급
-        return render_template("main.html", username=session.get("userID"))
+        return render_template("index.html", username=session.get("userID"))
     else:
-        return render_template('main.html')
+        return render_template('index.html')
 
 # 회원 목록
 @app.route("/memberlist")
